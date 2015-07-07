@@ -1,1 +1,8 @@
-_form.html.erb
+<%= form_for @report do |f| %>
+	<% @food.each do |food| %>
+		<%= fields_for 'food[]', food do |food_fields| -%>
+	    <p><%= food.name %>: <%= food_fields.check_box :id %></p>
+	  <% end %>
+	<% end %>
+	<%= f.submit %>
+<% end %>
