@@ -11,10 +11,6 @@ class ReportsController < ApplicationController
 		#@nutrients = Nutrient.joins(:foods).where(foods: {id: params[:foods]})
 
 		current_user.nutrients = Nutrient.joins(:foods).where(foods: {id: params[:foods]})
-		redirect_to :show
-	end
-
-	def show
-		@nutrients = current_user.missing_nutrients
+		redirect_to nutrients_path
 	end
 end
