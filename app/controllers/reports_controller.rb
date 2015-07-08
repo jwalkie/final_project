@@ -6,7 +6,8 @@ class ReportsController < ApplicationController
 	end
 
 	def new
-		@food = Food.all 
+		#@food = Food.all 
+		@food = Food.all.order(:name).group_by(&:category)
 		@report = Report.new 
 	end
 
