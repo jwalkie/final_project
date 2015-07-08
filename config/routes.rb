@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   #devise_for :users, controllers: { registrations: "registrations" }
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  
   root 'welcome#index'
 
   resources :reports

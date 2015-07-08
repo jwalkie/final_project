@@ -16,6 +16,11 @@ class ReportsController < ApplicationController
 		#@nutrients = Nutrient.joins(:foods).where(foods: {id: params[:foods]})
 
 		current_user.nutrients = Nutrient.joins(:foods).where(foods: {id: params[:foods]}).uniq
+		current_user.save
 		redirect_to reports_path
+
+		if current_user.save
+	    	ReportMailer.report_email(current_user).deliver
+	    end 
 	end
-end
+end 
