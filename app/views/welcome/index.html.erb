@@ -1,16 +1,8 @@
-<% if user_signed_in? %>
-  Hello <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> 
-<% end %> <br>
-<div class="custom_body">
+
+
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
@@ -27,6 +19,22 @@
                     <li>
                         <a class="page-scroll" href="#contact">Deficiencies</a>
                     </li>
+                    <% if user_signed_in? %>
+                        <li>
+                            <a class="page-scroll" href="/users/edit">Profile</a>
+                        </li>
+                        <li>
+                            <%= link_to 'Logout', destroy_user_session_path, method: :delete  %>
+                            <a class="page-scroll"></a>
+                        </li>
+                    <% else %>
+                        <li>
+                            <a class="page-scroll" href="/users/sign_up">Sign Up</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="users/sign_in">Login</a>
+                        </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -40,7 +48,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Vital</h1>
-                        <p class="intro-text">Micronutrients are essential <br> Learn More </p>
+                        <p class="intro-text">Micronutrients are abosolutely essential. <br> Learn More </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -57,6 +65,7 @@
                 <h2>About the Site</h2>
 					<p>This site seeks to provide a simple and universal platform for users to learn about micronutrients & malnutrition and to asses their diet. <br> <br>
 					Use the foods form to input data about the food you regularly consume, or the food you regularly prepare for others as an organization or caretaker. Based on your input, the form will suggest nutrients that you or those you care for may be missing.</p>
+                    <a href="/reports/new" class="btn btn-default btn-lg">Fill out form</a>
             </div>
         </div>
     </section>
@@ -68,14 +77,19 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>About Malnutrition</h2>
                     <h3>What is Micronutrient Malnutrition?</h3>
+                    <div class="home_paragraph">
                         <p>Micronutrient malnutrition refers to diseases caused by a lack of essential vitamins or minerals required in small amounts by the body for proper growth and development. Micronutrient deficiencies affect more than 2 billion people today, most commonly in developing countries, although people in developed countries can still suffer from these nutritional problems. Critical micronutrients required by our bodies and linked to the prevention of serious diseases include Vitamin A, Vitamin C, Iron, Iodine, Vitamin B1 (thiamin), Vitamin K, and Calcium.</p>
+                    </div>
 
                     <h3>Why is it an issue?</h3>
+                    <div class="home_paragraph">
                         <p>Dietary deficiencies of vital vitamins and minerals can lead to many serious, lasting health issues. Micronutrient Malnutrition also negatively affects learning ability, productivity, and human potential. This is particularly devastating in developing countries, as it impedes socioeconomic development and leads to a spiral of underdevelopment in already underprivileged groups. Micronutrient malnutrition most prevalently affects children in areas with limited educational and economic resources, therefore it is critical for caretakers and educators to share resources on how to ensure proper micronutrient consumption.</p>
+                    </div>
 
                     <h3>Where is it most prevalent?</h3> 
+                    <div class="home_paragraph">
                         <p>Prevalence of serious micronutrient deficiencies is highest in Sub-Saharan Africa and Southeast Asia, particularly for pregnant women and children. Data relating to deficiencies in the most affected underdeveloped areas is limited, due to the lack of resources and education relating to micronutrient malnutrition. </p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,35 +100,46 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Vitamin A Deficiency</h2>
-                <p>Vitamin A Deficiency (VAD) primarily affects children and pregnant women. The deficiency tragically causes Nyctalopia, or night blindness, and, eventually, permanent blindness. Vitamin A deficiency is common in underdeveloped countries, and every year, a quarter to half a million children go permanently blind as a result of VAD. It also leads to stunted physical growth and impaired resistance to infections, causing higher fatality rates, even at mild subclinical deficiencies.</p> 
-                <p>Factors that increase risk of the deficiency: low intakes of dairy products, eggs and B-carotene from fruits and vegetables, presence of helminth infection, ascaris</p> 
-                <p>Vitamin A rich food: beef liver, oats, eggs, milk, sweet potatoes, pumpkin, carrot, cantaloupe, mango, spinach, broccoli, kale, collards, butternut squash</p> 
+                <div class="home_paragraph">
+                    <p>Vitamin A Deficiency (VAD) primarily affects children and pregnant women. The deficiency tragically causes Nyctalopia, or night blindness, and, eventually, permanent blindness. Vitamin A deficiency is common in underdeveloped countries, and every year, a quarter to half a million children go permanently blind as a result of VAD. It also leads to stunted physical growth and impaired resistance to infections, causing higher fatality rates, even at mild subclinical deficiencies.</p> 
+                    <p>Factors that increase risk of the deficiency: low intakes of dairy products, eggs and B-carotene from fruits and vegetables, presence of helminth infection, ascaris</p> 
+                    <p>Vitamin A rich food: beef liver, oats, eggs, milk, sweet potatoes, pumpkin, carrot, cantaloupe, mango, spinach, broccoli, kale, collards, butternut squash</p>
+                </div> 
                 <h2>Iron Deficiency</h2>
-                <p>Iron deficiency is a problem across the globe, affecting more than 2 billion people. Anaemia in infants and children is associated with stunted physical growth, reduced resistance to infections and slow development of learning abilities. In adults it causes fatigue and reduced work capacity. Blood loss in childbirth is very dangerous for anaemic women and is the main cause of about 20 percent of maternal deaths. Maternal anaemia also leads to fetal growth retardation, low infant birth weight and increased perinatal mortality (death in the first week of life).</p> 
-                <p>Factors that increase risk of the deficiency: low intakes of meat/fish/poultry, preterm delivery or low birth weight, pregnancy and adolescence, heavy menstrual losses, parasite infections, malaria, low intakes of Vitamin C, allergy to cow’s milk</p>
-                <p>Iron rich food: beef, spinach, potatoes, chicken, oysters, shrimp, tuna, raisins, prunes. kidney beans, chickpeas, lentils, tofu, cashews</p>
+                <div class="home_paragraph">
+                    <p>Iron deficiency is a problem across the globe, affecting more than 2 billion people. Anaemia in infants and children is associated with stunted physical growth, reduced resistance to infections and slow development of learning abilities. In adults it causes fatigue and reduced work capacity. Blood loss in childbirth is very dangerous for anaemic women and is the main cause of about 20 percent of maternal deaths. Maternal anaemia also leads to fetal growth retardation, low infant birth weight and increased perinatal mortality (death in the first week of life).</p> 
+                    <p>Factors that increase risk of the deficiency: low intakes of meat/fish/poultry, preterm delivery or low birth weight, pregnancy and adolescence, heavy menstrual losses, parasite infections, malaria, low intakes of Vitamin C, allergy to cow’s milk</p>
+                    <p>Iron rich food: beef, spinach, potatoes, chicken, oysters, shrimp, tuna, raisins, prunes. kidney beans, chickpeas, lentils, tofu, cashews</p>
+                </div>
                 <h2>Vitamin C Deficiency</h2>
-                <p>Vitamin C, or ascorbic acid, is used by the human body to make collagen and repair body tissues. The human body cannot make Vitamin C on its own, so it is critical that enough Vitamin C is consumed through fruits, vegetables, or Vitamin C supplements. Over time, severe Vitamin C deficiency can lead to an illness known as scurvy, which is regularly reported in famine situations in suffering parts of Africa. Scurvy affects blood vessels, skin and tissue repair, which results in anemia, skin hemorrhaging, and gum disease.</p>
-                <p>Factors that increase risk of the deficiency: low intakes of fresh vitamin c-rich fruits and vegetables, prolonged cooking, elderly adults, alcoholics</p>
-                <p>Vitamin C rich foods: oranges, grapefruit, kiwi, strawberries, tomato, red pepper, potato</p>
+                <div class="home_paragraph">
+                    <p>Vitamin C, or ascorbic acid, is used by the human body to make collagen and repair body tissues. The human body cannot make Vitamin C on its own, so it is critical that enough Vitamin C is consumed through fruits, vegetables, or Vitamin C supplements. Over time, severe Vitamin C deficiency can lead to an illness known as scurvy, which is regularly reported in famine situations in suffering parts of Africa. Scurvy affects blood vessels, skin and tissue repair, which results in anemia, skin hemorrhaging, and gum disease.</p>
+                    <p>Factors that increase risk of the deficiency: low intakes of fresh vitamin c-rich fruits and vegetables, prolonged cooking, elderly adults, alcoholics</p>
+                    <p>Vitamin C rich foods: oranges, grapefruit, kiwi, strawberries, tomato, red pepper, potato</p>
+                </div>
                 <h2>Vitamin B1 (thiamin) Deficiency</h2>
-
-
-
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
+                <div class="home_paragraph">
+                    <p>Vitamin B1 or thiamin is one of the 8 B vitamins used to help the body convert food into fuel, which is used as energy. Thiamin plays a large role in metabolic reactions and a deficiency prevents proper digestion of carbohydrates. This causes a build up of pyretic acid in the bloodstream causing a loss of mental alertness, difficulty breathing, and heart damage, a disease called Beriberi most prevalent in underdeveloped countries. Vitamin B1 deficiency is also linked to Wernicke-Korsakoff syndrome, a brain disorder, cataracts, Alzheimer’s disease, and heart failure.</p>
+                    <p>Factors that increase risk of the deficiency: high consumption of refined rice and cereals, low intakes of animal and dairy products. and legumes, consumption of thiaminase (found in raw fish), breastfeeding from deficient mothers, chronic alcoholism, genetic disorder of thiamine metabolism</p>
+                    <p>Vitamin B1 rich foods: egg, milk, spinach, lentils, green peas, rice, pork, bread, pecans</p></div>
+                <h2>Vitamin K Deficiency</h2>
+                <div class="home_paragraph">
+                    <p>Vitamin K plays a major role in helping blood to clot. If blood does not properly coagulate, uncontrolled or excessive bleeding can occur. Vitamin K deficiencies are rare in adults, but very common in newborns and infants.</p> <p>Factors that increase risk of the deficiency: Crohn’s disease, celiac disease, take drugs that interfere with vitamin K absorptions, chronic alcoholism </p>
+                    <p>Vitamin K rich foods: spinach, broccoli, kale, swiss chard, parsley, watercress, soybean oil, canola oil, olive oil</p>
+                </div>
+                <h2>Iodine Deficiency</h2> 
+                <div class="home_paragraph">
+                    <p>Iodine is needed for the the production of the thyroid hormone, which helps the body use energy, stay warm and keep the brain, heart, muscles, and other organs working properly. It cannot be produced by the body, and thus is an important part of the diet.Iodine deficiency is prevalent in areas with low levels of iodine in the soil and water, Iodine deficiency affects an estimated 2 billion people.</p>
+                    <p>Factors that increase risk of the deficiency: selenium deficiency, pregnancy, exposure to radiation, gender (higher occurrence in women), smoking tobacco, high alcohol intake</p>
+                    <p>Iodine rich food: iodized salt, seaweed</p>
+                </div>
+                <h2>Calcium Deficiency</h2> 
+                <div class="home_paragraph">
+                    <p>Calcium is a mineral used by the body to stabilize blood pressure, growing new bone, and maintaining bone and teeth strength. Calcium deficiency can cause brittle bones, eye damage, an irregular heartbeat, and an increased risk for developing osteoporosis.</p>
+                    <p>Factors that increase risk of the deficiency: old age, hypoparathyroidism, gender (higher occurrence in women), premature babies born to diabetic mothers</p>
+                    <p>Calcium rich food: milk, broccoli, kale, oranges, tofu, yogurt, sardines, cheddar cheese, white beans, dried figs, red beans, pinto beans, green peas</p>
+                </div>
             </div>
         </div>
     </section>
-</div>
+
