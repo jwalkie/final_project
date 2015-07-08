@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Hello <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -7,13 +7,19 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> 
 <% end %> <br>
 
+<style>
+	body {
+		background-image: url("https://farm3.staticflickr.com/2810/10471253276_85e0b31837_h.jpg")
+	}
+</style>
 
+<body>
 <h1>Home</h1>
 
 <p>informational text</p>
 
 <%= link_to "Find out what nutrients your diet is missing", new_report_path %> |
-<%= link_to "Past results", reports_path %>
+</body>
 
 
 
