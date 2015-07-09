@@ -17,6 +17,7 @@ class ReportsController < ApplicationController
 		@user = current_user 
 		@user.nutrients = Nutrient.joins(:foods).where(foods: {id: params[:foods]}).uniq
 		@user.save
+		@nutrients = current_user.missing_nutrients
 
 	    redirect_to reports_path
 
