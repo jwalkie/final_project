@@ -33,11 +33,6 @@
 	padding-right: 100pt;
 }
 
-section#about {
-  padding-top: 170px;
-  padding-bottom: 100px;
- }
-
 
 @media(min-width:768px) {
     p {
@@ -84,13 +79,18 @@ a:focus {
     background-color: black;
 }
 
+section#about {
+  padding-top: 170px;
+  padding-bottom: 163px;
+ }
+
 section#contact {
   padding-top: 100px;
 }
 
 section#malnutrition {
   padding-top: 100px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 section#download {
@@ -103,3 +103,13 @@ section#photo1 {
 	background-image: url("http://s3.postimg.org/3nnm5thk3/greens.jpg");
 	background-size: 100%;
 }
+
+
+input.btn.btn-default {
+  border: 1px solid rgba(118, 22, 63, 0.9);
+  color: rgba(118, 22, 63, 0.9);
+}
+
+
+
+
