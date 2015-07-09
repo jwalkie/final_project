@@ -37,7 +37,7 @@ foods = [
 	{ name: "Sweet Potato", category: "Vegetable", nutrients: ["Vitamin A"] },
 	{ name: "Pumpkin", category: "Vegetable", nutrients: ["Vitamin A"] },
 	{ name: "Carrot", category: "Vegetable", nutrients: ["Vitamin A"] },
-	{ name: "Mango", category: "Vegetable", nutrients: ["Vitamin A"] },
+	{ name: "Mango", category: "Fruit", nutrients: ["Vitamin A"] },
 	{ name: "Carrot", category: "Vegetable", nutrients: ["Vitamin A", "Vitamin B1"] },
 	{ name: "Spinach", category: "Vegetable", nutrients: ["Vitamin A", "Vitamin C", "Vitamin B1", "Iron", "Vitamin K"] },
 	{ name: "Broccoli", category: "Vegetable", nutrients: ["Vitamin A", "Vitamin C", "Calcium", "Vitamin K"] },
