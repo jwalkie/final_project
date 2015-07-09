@@ -1,9 +1,20 @@
-<%= form_for @report do |f| %>
-	<% @food.each do |category, foods| %>
-		<h1><%= category %></h1>
-		<% foods.each do |food| %>
-			<%= check_box_tag "foods[]", food.id %> <%= food.name %><br>
-		<% end %>
-	<% end %>
-	<%= f.submit %>
-<% end %>
+<div class="container">	
+	<div class="form">
+		<div class="row">
+			<%= form_for @report do |f| %>
+				<% @food.each do |category, foods| %>
+					<div class="form_body">
+						<div class="col-md-6">
+							<h1><%= category %></h1>
+							<% foods.each do |food| %>
+								<%= check_box_tag "foods[]", food.id %> <%= food.name %><br>
+							<% end %>
+						</div>
+					</div>
+				<% end %>
+				<a class="btn"<%= f.submit %>> 
+					<i class="icon-edit">Create Report</i>
+			<% end %>
+		</div>
+	</div>
+</div>

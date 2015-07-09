@@ -1,7 +1,25 @@
 .about {
 	background-color: white;
 	color: black;
+	font-family: georgia;
 }
 .home_paragraph {
 	text-align: justify;
+}
+.form {
+	background-color: white;
+	color: rgba(228, 78, 58, 1);
+}
+.page-header {
+	text-align: center;
+	padding-left: 100pt;
+	padding-right: 100pt;
+}
+.brand-heading {
+	font-family: euro caps;
+}
+
+.form_body {
+	padding-left: 100pt;
+	padding-right: 100pt;
 }
