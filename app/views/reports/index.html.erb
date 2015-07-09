@@ -1,5 +1,13 @@
+<style>
+	body {
+		color: black;
+	}
+</style>
+
+<body>
 <p>Based on your choices, you may consider the including more of the micronutrients in your diet:</p>
 <% @nutrients.each do |nutrient| %>
 	<p><%= nutrient.name %></p>
 	<p><%= nutrient.information %></p>
 <% end %>
+</body>

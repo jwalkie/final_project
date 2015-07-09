@@ -110,6 +110,22 @@ input.btn.btn-default {
   color: rgba(118, 22, 63, 0.9);
 }
 
+input.btn.btn-default:hover {
+  background-color: transparent;
+}
+
+a.btn.btn-default {
+  border: 2.5px solid rgba(118, 22, 63, 0.9);
+  color: rgba(118, 22, 63, 0.9);
+  background-color: transparent;
+  font-size: 18px;
+}
+
+a.btn.btn-default:hover {
+	background-color: rgba(118, 22, 63, 0.3);
+}
+
+
 
 
 
