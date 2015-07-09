@@ -1,11 +1,18 @@
-.about {
-	background-color: white;
+.about_heading {
+	font-size: 70px;
+}
+
+.about_section {
+	background-color: rgb(255,255,250);
 	color: black;
 	font-family: georgia;
+	text-align: left;
+
 }
 .home_paragraph {
 	text-align: justify;
 }
+
 .form {
 	background-color: white;
 	color: rgba(228, 78, 58, 1);
@@ -23,3 +30,7 @@
 	padding-left: 100pt;
 	padding-right: 100pt;
 }
+
+section#about {
+  padding-top: 40px;
+
