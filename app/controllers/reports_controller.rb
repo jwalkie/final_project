@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@nutrients = current_user.nutrients
+		@nutrients = current_user.missing_nutrients
 	end
 
 	def new
