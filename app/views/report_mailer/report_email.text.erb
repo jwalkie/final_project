@@ -1,0 +1,11 @@
+Hi,
+===============================================
+ 
+Thank you for visiting vital.com.
+
+Based on your input, you may want to consider adding more of these nutrients into your diet.
+
+<% @nutrients.each do |nutrient| %>
+	<p><%= nutrient.name %></p>
+	<p><%= nutrient.information %></p>
+<% end %>

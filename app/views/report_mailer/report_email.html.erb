@@ -6,10 +6,16 @@
   <body>
     <h1>Hi </h1>
     <p>
-      Thank you for using the nutrition calculator at vital.com<br>
+      Thank you for visiting vital.com<br>
     </p>
     <p>
-      Here are your results. 
+      Based on your input, you may want to consider adding more of these nutrients into your diet.  
+    </p>
+    <p>
+      <% @nutrients.each do |nutrient| %>
+      <p><%= nutrient.name %></p>
+      <p><%= nutrient.information %></p>
+      <% end %>
     </p>
   </body>
 </html>
