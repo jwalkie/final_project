@@ -1,7 +1,16 @@
-.about {
-	background-color: white;
+.about_heading {
+	font-size: 70px;
+}
+
+.about_section {
+	background-color: rgb(255,255,250);
 	color: black;
+	text-align: left;
 }
 .home_paragraph {
 	text-align: justify;
+}
+
+section#about {
+  padding-top: 40px;
 }

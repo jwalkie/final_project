@@ -1,6 +1,15 @@
+ <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
-            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                Home
+                </a>
+            </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
@@ -22,8 +31,7 @@
                             <a class="page-scroll" href="/users/edit">Profile</a>
                         </li>
                         <li>
-                            <%= link_to 'Logout', destroy_user_session_path, method: :delete  %>
-                            <a class="page-scroll"></a>
+                            <a class="page-scroll"<%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
                         </li>
                     <% else %>
                         <li>
@@ -46,7 +54,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Vital</h1>
-                        <p class="intro-text">Micronutrients are abosolutely essential. <br> Learn More </p>
+                        <p class="intro-text">Micronutrients are abosolutely essential. <br> Learn Why </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -57,11 +65,16 @@
     </header>
 
     <!-- About Section -->
-    <div class="about">
+    <div class="about_section">
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-md-6">
+                <img src= '//c2.staticflickr.com/4/3384/3650629542_4cc062ff12.jpg'>
+            </div>
+            <div class="col-md-6">
+                <div class= "about_heading">
                 <h2>About the Site</h2>
+                </div>
 					<p>This site seeks to provide a simple and universal platform for users to learn about micronutrients & malnutrition and to asses their diet. <br> <br>
 					Use the foods form to input data about the food you regularly consume, or the food you regularly prepare for others as an organization or caretaker. Based on your input, the form will suggest nutrients that you or those you care for may be missing.</p>
             </div>
