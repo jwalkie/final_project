@@ -1,13 +1,58 @@
 <style>
 	body {
 		color: black;
+		padding-top: 70px;
+		padding-right: 200pt;
+		padding-left: 200pt;
+
+	}
+	.reports-header {
+		font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		margin: 0 0 35px;
+		font-weight: 500;
+    	font-size: 25pt;
+    	color: rgba(118, 22, 63, 0.9);
+    	text-align: center;
+	}
+	.nutrient-name {
+		font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+		margin: 0 0 35px;
+		font-weight: 575;
+    	font-size: 14pt;
+    	
+    	text-align: center;
+	}
+	.nutrient-info {
+		text-align: justify;
+	}
+	a.btn-default {
+		padding-left: 20pt;
+		padding-right: 20pt;
+	}
+	.text {
+		text-align: center;
+		padding-bottom: 100pt;
+	}
+	.underline {
+		padding-right: 30pt;
+		padding-left: 30pt;
 	}
 </style>
 
 <body>
-<p>Based on your choices, you may consider the including more of the micronutrients in your diet:</p>
-<% @nutrients.each do |nutrient| %>
-	<p><%= nutrient.name %></p>
-	<p><%= nutrient.information %></p>
-<% end %>
+	<div class="reports-header">Based on your choices, you may consider the including more of the in your diet:</div>
+	<% @nutrients.each do |nutrient| %>
+		<div class="nutrient-name">
+		<a href="/#contact"><%= nutrient.name %></a>
+		<div class="underline"> <hr> </div>
+		</div>
+		<div class="nutrient-info">
+		<p><%= nutrient.information %></p>
+		</div>
+	<% end %>
+	<div class="text">
+	<div class="underline"> <hr> </div>
+	<p>This report will be automatically email to your account so that you can keep track of this report and information relating to these micronutrients!</p>
+	<div class="underline"> <hr> </div>
+	<a href="/" class="btn btn-default" role="button">Home</a></div>
 </body>
