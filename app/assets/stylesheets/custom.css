@@ -3,10 +3,8 @@
 }
 
 .about_section {
-	background-color: rgb(255,255,250);
 	color: black;
 	font-family: georgia;
-	text-align: left;
 
 }
 .home_paragraph {
@@ -28,17 +26,16 @@
 	text-transform: none;
 }
 .brand-heading {
-	font-family: euro caps;
 }
 
 .form_body {
-	padding-left: 100pt;
+	padding-left: 130pt;
 	padding-right: 100pt;
 }
 
 section#about {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 170px;
+  padding-bottom: 100px;
  }
 
 
@@ -87,6 +84,22 @@ a:focus {
     background-color: black;
 }
 
-section#download.content-section.text-center {
-	background-color: rgba(174, 67, 112, .9);
+section#contact {
+  padding-top: 100px;
+}
+
+section#malnutrition {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+section#download {
+	background-image: url("http://s2.postimg.org/5kdykpoi1/more_pics.jpg");
+	background-size: 100%;
+	padding-bottom: 0px;
+}
+
+section#photo1 {
+	background-image: url("http://s3.postimg.org/3nnm5thk3/greens.jpg");
+	background-size: 100%;
 }

@@ -9,7 +9,7 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: rgb(255,255,254);
 }
 
 html {
@@ -45,7 +45,8 @@ p {
 }
 
 a {
-    color: #42dca3;
+    color: black;
+    font-size: 20px;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -54,7 +55,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #1d9b6c;
+    color: black;
 }
 
 .light {
@@ -136,7 +137,7 @@ a:focus {
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        background: rgba(174, 67, 112, .9);
+        background: rgba(118, 22, 63, 0.9);
     }
 }
 

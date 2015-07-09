@@ -21,7 +21,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Malnutrition</a>
+                        <a class="page-scroll" href="#malnutrition">Malnutrition</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Deficiencies</a>
@@ -31,7 +31,8 @@
                             <a class="page-scroll" href="/users/edit">Profile</a>
                         </li>
                         <li>
-                            <a class="page-scroll"<%= link_to 'Logout', destroy_user_session_path, method: :delete %></a>
+                            <a class="page-scroll"<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                            </a>
                         </li>
                     <% else %>
                         <li>
@@ -68,32 +69,30 @@
     <div class="about_section">
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-md-6">
-                <img src="http://cliparts.co/cliparts/8cG/EM6/8cGEM64ca.jpg" width="400px">
-            </div>
-            <div class="col-md-6">
+            <div class="col-lg-8 col-lg-offset-2">
                 <div class= "about_heading">
                 <h2>About the Site</h2>
+                <div class="underline"> <hr> </div>
                 </div>
 					<p>This site seeks to provide a simple and universal platform for users to learn about micronutrients & malnutrition and to asses their diet. <br> <br>
 					Use the foods form to input data about the food you regularly consume, or the food you regularly prepare for others as an organization or caretaker. Based on your input, the form will suggest nutrients that you or those you care for may be missing.</p>
-                    <a href="/reports/new">Fill Out Form</a>
+                    <a href="/reports/new" class= "btn btn">Fill Out Form</a>
             </div>
         </div>
     </section>
 
+    <section id="photo1" class="content-section text-center">
+    </section>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>About Malnutrition</h2>
-                    <h3>What is Micronutrient Malnutrition?</h3>
+    <section id="malnutrition" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Malnutrition</h2>
+                <div class="underline"> <hr> </div>
+                <h3>What is Micronutrient Malnutrition?</h3>
                     <div class="home_paragraph">
                         <p>Micronutrient malnutrition refers to diseases caused by a lack of essential vitamins or minerals required in small amounts by the body for proper growth and development. Micronutrient deficiencies affect more than 2 billion people today, most commonly in developing countries, although people in developed countries can still suffer from these nutritional problems. Critical micronutrients required by our bodies and linked to the prevention of serious diseases include Vitamin A, Vitamin C, Iron, Iodine, Vitamin B1 (thiamin), Vitamin K, and Calcium.</p>
                     </div>
-
                     <h3>Why is it an issue?</h3>
                     <div class="home_paragraph">
                         <p>Dietary deficiencies of vital vitamins and minerals can lead to many serious, lasting health issues. Micronutrient Malnutrition also negatively affects learning ability, productivity, and human potential. This is particularly devastating in developing countries, as it impedes socioeconomic development and leads to a spiral of underdevelopment in already underprivileged groups. Micronutrient malnutrition most prevalently affects children in areas with limited educational and economic resources, therefore it is critical for caretakers and educators to share resources on how to ensure proper micronutrient consumption.</p>
@@ -103,9 +102,12 @@
                     <div class="home_paragraph">
                         <p>Prevalence of serious micronutrient deficiencies is highest in Sub-Saharan Africa and Southeast Asia, particularly for pregnant women and children. Data relating to deficiencies in the most affected underdeveloped areas is limited, due to the lack of resources and education relating to micronutrient malnutrition. </p>
                     </div>
-                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
     </section>
 
 
@@ -113,6 +115,8 @@
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+                <h1>Micronutrient Deficiences</h1>
+                <div class="underline"> <hr> </div>
                 <h2>Vitamin A Deficiency</h2>
                 <div class="home_paragraph">
                     <p>Vitamin A Deficiency (VAD) primarily affects children and pregnant women. The deficiency tragically causes Nyctalopia, or night blindness, and, eventually, permanent blindness. Vitamin A deficiency is common in underdeveloped countries, and every year, a quarter to half a million children go permanently blind as a result of VAD. It also leads to stunted physical growth and impaired resistance to infections, causing higher fatality rates, even at mild subclinical deficiencies.</p> 
@@ -156,5 +160,6 @@
             </div>
         </div>
     </section>
+
     </div>
 
