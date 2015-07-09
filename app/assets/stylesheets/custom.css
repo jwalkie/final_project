@@ -31,8 +31,15 @@
 .form_body {
 	padding-left: 130pt;
 	padding-right: 100pt;
+	text-align: left;
 }
 
+h1.page-header {
+  background-color: white;
+  color: rgba(174, 67, 112, 1);
+  text-align: center;
+  font-size: 35px;
+}
 
 @media(min-width:768px) {
     p {
@@ -122,6 +129,40 @@ a.btn.btn-default {
 }
 
 a.btn.btn-default:hover {
+	background-color: rgba(118, 22, 63, 0.3);
+}
+
+.category_name {
+	font-size: 10px;
+}
+
+input[type="submit"] {
+	border: 2.5px solid rgba(174, 67, 112, 1);
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: rgba(174, 67, 112, 1);
+	background-color: transparent;
+	font-size: 20px;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+input[type="submit"]:hover{
+	background-color: rgba(118, 22, 63, 0.3);
+}
+
+
+.btn.btn-form {
+	border: 2.5px solid rgba(174, 67, 112, 1);
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: rgba(174, 67, 112, 1);
+	background-color: transparent;
+	font-size: 16px;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-transform: none;
+}
+
+.btn.btn-form:hover {
 	background-color: rgba(118, 22, 63, 0.3);
 }
 

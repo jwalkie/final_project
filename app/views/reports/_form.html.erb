@@ -1,15 +1,45 @@
-<div class="container">	
-	<div class="form">
-			<%= form_for @report do |f| %>
-				<% @food.each do |category, foods| %>
-					<br>
-					<h1><%= category %></h1>
-					<% foods.each do |food| %>
-						<%= check_box_tag "foods[]", food.id %> <%= food.name %><br>
-					<% end %>
+<style>
+
+	h1 {
+		font-size: 23px;
+	}
+	.col-md-12 {
+		text-align: center
+	}
+
+</style>
+
+<div class="container">
+<%= form_for @report do |f| %>
+	<div class="row">
+		<% @food.each do |category, foods| %>
+			<div class="col-md-2">
+				<br>
+				<div class="category_name">
+				<h1><%= category %></h1>
+				</div>
+				<% foods.each do |food| %>
+					<%= check_box_tag "foods[]", food.id %> <%= food.name %><br>
 				<% end %>
-			<br>
-			<%= f.submit %>
-			<% end %>
+			</div>
+	<% end %>
 	</div>
+<br>
+<div class="underline"> <hr> </div>
+<div class="row">
+	<div class="submit_button">
+	<div class="col-md-12">
+		<%= f.submit %>
+		<% end %>
+	</div>
+	</div>
+</div>
+
+<br>
+
+<div class= "row">
+	<div class="col-md-12">
+	<a href="/" class="btn btn-form" role="button">Back</a>
+	</div>
+</div>
 </div>
