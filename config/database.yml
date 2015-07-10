@@ -11,7 +11,7 @@ default: &default
 
 development:
   adapter: postgresql
-  database: final_app_developmen
+  database: final_app_development
   pool: 5
   timeout: 500
 
